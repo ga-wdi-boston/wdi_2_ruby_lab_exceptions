@@ -1,3 +1,6 @@
+
+# Prompt the user for a numerator
+# exit program if it's not an integer, we're mean like that.
 def get_num
   begin
     print "Enter a numerator: "
@@ -6,13 +9,12 @@ def get_num
     puts "Exception is:\n \'#{e}\'"
     puts "Exception type is :\n \'#{e.class.name}\'"
     puts "Exception message is:\n \'#{e.message}\'"
-    # puts "Exception backtrace is:"
-    # puts e.backtrace
-
     exit
   end
 end
 
+# Prompt the user for a denominator
+# exit program if it's not an integer, we're still mean.
 def get_denom
   begin
     print "Enter a denominator: "
@@ -21,9 +23,6 @@ def get_denom
     puts "Exception is:\n \'#{e}\'"
     puts "Exception type is :\n \'#{e.class.name}\'"
     puts "Exception message is:\n \'#{e.message}\'"
-    # puts "Exception backtrace is:"
-    # puts e.backtrace
-
     exit
   end
 end

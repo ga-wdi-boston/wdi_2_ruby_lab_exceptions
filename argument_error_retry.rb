@@ -1,36 +1,40 @@
+# Prompt the user for a numerator
+# Give them 4 chances to enter a valid integer.
 def get_num
   retry_count = 0
   begin
+
     print "Enter a numerator: "
     num = Integer(gets.chomp)
+
   rescue ArgumentError => e
     exit if retry_count > 2
     retry_count += 1
 
     puts "Exception is:\n \'#{e}\'"
-    puts "Exception type is :\n \'#{e.class.name}\'"
-    puts "Exception message is:\n \'#{e.message}\'"
-    # puts "Exception backtrace is:"
-    # puts e.backtrace
 
+    # retry is a Ruby keyword that will retry
+    # the ruby code in the block that raised the 
+    # exception.
+    # it will try to continue running at statement
+    # that caused the exception.
+    # line: 8
     retry
   end
 end
 
+# Prompt the user for a denomintor
+# Give 3 chances to enter a valid integer.
 def get_denom
   retry_count = 0
   begin
     print "Enter a denominator: "
     denom = Integer(gets.chomp)
   rescue ArgumentError => e
-    exit if retry_count > 2
     retry_count += 1
+    exit if retry_count > 2
 
     puts "Exception is:\n \'#{e}\'"
-    puts "Exception type is :\n \'#{e.class.name}\'"
-    puts "Exception message is:\n \'#{e.message}\'"
-    # puts "Exception backtrace is:"
-    # puts e.backtrace
 
     retry
   end

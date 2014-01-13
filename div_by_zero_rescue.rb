@@ -1,28 +1,33 @@
-begin
-# "raises" a div by zero
-  ratio = 44/0
-#rescue ZeroDivisionError => e
-# puts "got a zero division error"
-rescue StandardError => e
-  puts "Exception.class is #{e.class.name}"
-  puts "Exception.message is #{e.message}"
-  puts "Exception.backtrace is  #{e.backtrace}"
+# An exception handler is a block of code that 
+# is executed if an exception occurs during the 
+# execution of some other block of code.
 
-  exit # exit program
+# begin is a ruby keyword.
+# it defines a block where one can 'handle'
+# exceptions
+begin  
+
+  # "raises" a div by zero exception
+  ratio = 44/0
+
+# Raising an exception means:
+#  1. Stopping normal execution of the program.
+#  2. Transferring the flow-of-control to the exception handling code.
+  puts "Oh no, I'm never seen. I'm so insignifcant, boo hoo"
+
+# rescue is a ruby keyword.
+# it defines a block that can handle an exception
+rescue ZeroDivisionError => e
+  #Most specific error handler.
+  puts "In block that handles an ZeroDivision being raised"
+rescue Exception => e
+  # catch all execeptions
+  puts "In block that handles an Exception being raised"
+  # puts "Exception.class is #{e.class.name}"
+  # puts "Exception.message is #{e.message}"
+  # puts "Exception.backtrace is  #{e.backtrace}"
 end
 
-# should never get here!!!
-
-
+# should not get here!
 puts "ratio of 44/0 is #{ratio}"
 
-# Exceptions form a class hierarchy with the class Exception at the
-# top.
-
-# StandardError is a subclass of Exception that is a parent of all
-# the other exception types one should or could handle.
-
-# ZeroDivisionError is a subclass of StandardError.
-
-# List of exceptions
-# See http://www.zenspider.com/Languages/Ruby/QuickRef.html#exceptions-catch-and-throw
