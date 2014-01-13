@@ -1,0 +1,25 @@
+div_by_zero.rb
+div_by_zero_rescue.rb
+argument_error.rb
+argument_error_with_retry.rb
+create_person.rb
+method_missing.rb
+
+
+1) Add code to allow the person name and age setters to only accept
+valid input. What exception should it raise if the argument values are
+NOT valid?
+
+Write a command line utility that will prompt the user to create a valid person.
+Allow them to enter invalid input 3 times for the name and twice for the age.
+
+2) Given this list of hash literals, create people by passing each hash
+to the Person.new method. Ignore bad data, (hint: use rescue)
+
+[
+{john: 44},
+{mary:, 33},
+{bill: 22},
+{harry: 44, 'male'},
+{sue: 26}
+]
