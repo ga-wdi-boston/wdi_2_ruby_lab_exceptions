@@ -30,7 +30,7 @@ end
 
 begin
   denom = get_denom
-  raise MyException
+
 rescue ArgumentError => e
   puts "Exception is:\n \'#{e}\'"
   puts "Exception type is :\n \'#{e.class.name}\'"

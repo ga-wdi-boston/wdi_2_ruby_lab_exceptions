@@ -3,15 +3,11 @@ end
 
 class MethodTest
 
-  # def method_missing(method, *args, &block)
-  #   puts "MethodTest#method_missing: method = #{method}"
-  #   puts "MethodTest#method_missing: args = #{args}"
-  # end
-
   # should raise an exception
   def divide_by_zero(n)
     n/0
   end
+
   # Raise does 4 things.
 
   #   * Builds an exception object.
@@ -24,11 +20,19 @@ class MethodTest
   end
 
   def raise_error_and_ensure
-    raise "Some horrible exception"
-  ensure
-    puts "OK, I see this horrible exception"
+    begin
+      puts "Lets raise a horrible exception and use the ensure keyword"
+      raise "Some horrible exception"
+    ensure
+      puts "OK, I see this horrible exception"
+    end
   end
 
+  # Warning, metaprogramming here.
+  def method_missing(method, *args, &block)
+    puts "MethodTest#method_missing: method = #{method}"
+    puts "MethodTest#method_missing: args = #{args}"
+  end
 
 end
 
@@ -44,6 +48,8 @@ end
 
 # invoke_missing_method
 mt = MethodTest.new
-#mt.divide_by_zero(33)
+mt.divide_by_zero(33)
 # mt.raise_method_test_error
-mt.raise_error_and_ensure
+# mt.raise_error_and_ensure
+
+#invoke_missing_method
