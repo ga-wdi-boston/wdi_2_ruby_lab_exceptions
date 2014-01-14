@@ -1,6 +1,6 @@
 ## Ruby Exceptions
 
-### Ways to handle errors in Ruby. 
+### Ways to handle errors in Ruby.
 
 
 * Represents some kind of exceptional or error condition
@@ -15,21 +15,21 @@
 	![Exceptions](ruby_exceptions.jpg)
 
 
-* By default, Ruby programs terminate when an exception occurs. 
+* By default, Ruby programs terminate when an exception occurs.
 
-* It is possible to declare exception handlers. 
+* It is possible to declare exception handlers.
 	<p>An exception handler is a block of code that is executed if an exception occurs during the execution of some other block of code.</p>
-	
-	
+
+
 * Raising an exception means:
 	1. Stopping normal execution of the program.
 	2. Tansferring the flow-of-control to the exception handling code.
-	
-	
+
+
 ### Cases where an Exception will be raised.
 
 * Divide a number by Zero. __See demo__
-* Open a file that doesn't exist. 
+* Open a file that doesn't exist.
 * User enters the wrong type of input. __See demo__
 * A method determines that an argument passed to is not correct. __See demo__
 * Calling a method on an object that it does have. __See demo__
@@ -37,11 +37,11 @@
 * RubyOnRails has many methods that can raise and exception. __See demo__
 	* Invalid input from a form.
 	* Saving an object to the Database that is not valid.
-	
+
 ## In class demo.
 <code>
 subl .
-</code>		
+</code>
 
 Look at div_by_zero_exception.rb
 
@@ -52,8 +52,8 @@ ruby div_by_zero_exception.rb
 Do the above for files div_by_zero_rescue.rb,
 argument_error.rb,
 argument_error_with_retry.rb,
-create_person.rb and 
-method_missing.rb.
+(create_person.rb and method_missing.rb) and
+raise_exceptions.rb.
 
 
 ## Lab
@@ -71,9 +71,5 @@ method_missing.rb.
 	{sue: 26}
 ]
 
-1. Given this above list of hash literals, create people by passing each hash to the Person.new method. 
+1. Given this above list of hash literals, create people by passing each hash to the Person.new method.
 2. Ignore bad data, (hint: use rescue). Another words, don't let bad data break your program.
-
-
-
-	
