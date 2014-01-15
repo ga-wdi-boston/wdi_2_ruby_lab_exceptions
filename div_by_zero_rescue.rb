@@ -17,15 +17,17 @@ begin
 
 # rescue is a ruby keyword.
 # it defines a block that can handle an exception
-rescue ZeroDivisionError => e
-  #Most specific error handler.
-  puts "In block that handles an ZeroDivision being raised"
+# rescue ZeroDivisionError => div_error
+#   #Most specific error handler.
+#   puts "In block that handles an ZeroDivision being raised"
+
+#   puts "show the div_error #{div_error}"
 rescue Exception => e
   # catch all execeptions
   puts "In block that handles an Exception being raised"
-  # puts "Exception.class is #{e.class.name}"
-  # puts "Exception.message is #{e.message}"
-  # puts "Exception.backtrace is  #{e.backtrace}"
+  puts "Exception.class is #{e.class.name}"
+  puts "Exception.message is #{e.message}"
+  puts "Exception.backtrace is  #{e.backtrace}"
 end
 
 # should not get here!

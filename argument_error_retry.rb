@@ -1,18 +1,22 @@
 # Prompt the user for a numerator
 # Give them 4 chances to enter a valid integer.
 def get_num
-  retry_count = 0
+  retry_count = 2
+
   begin
+    puts "im at the begining"
 
     print "Enter a numerator: "
     num = Integer(gets.chomp)
 
   rescue ArgumentError => e
-    exit if retry_count > 2
-    retry_count += 1
+    exit if retry_count == 0
+
+    retry_count -= 1
 
     puts "Exception is:\n \'#{e}\'"
-
+    puts "Hey, this is gotta be an Integer, pal"
+    puts "you got #{retry_count} more times to get this right, you."
     # retry is a Ruby keyword that will retry
     # the ruby code in the block that raised the 
     # exception.

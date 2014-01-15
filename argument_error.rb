@@ -9,7 +9,8 @@ def get_num
     puts "Exception is:\n \'#{e}\'"
     puts "Exception type is :\n \'#{e.class.name}\'"
     puts "Exception message is:\n \'#{e.message}\'"
-    exit
+
+    exit # by ruby program.
   end
 end
 
@@ -32,4 +33,4 @@ denom = get_denom
 
 # should check for divide by zero here!!
 ratio = num/denom
-puts "ration is #{ratio}"
+puts "ratio is #{ratio}"
