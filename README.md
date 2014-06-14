@@ -38,25 +38,29 @@
 	* Invalid input from a form.
 	* Saving an object to the Database that is not valid.
 
-## In class demo.
+### Demo
+
+Look at div_by_zero.rb. Notice how it raises a "Divide by Zero" exception.
+
+Run it.
 <code>
-subl .
+ruby div_by_zero.rb
 </code>
 
-Look at div_by_zero_exception.rb
+Rescue the exception and show the exception attributes.
 
 <code>
 ruby div_by_zero_exception.rb
 </code>
 
-Do the above for files div_by_zero_rescue.rb,
-argument_error.rb,
-argument_error_with_retry.rb,
-(create_person.rb and method_missing.rb) and
-raise_exceptions.rb.
+Do the above for:  
+
+* argument_error.rb and argument_error_retry 
+* raise_exceptions.rb  
 
 
-## Lab
+## Lab (__Advanced__)
+
 ### Validate name and age.
 1. Create a Person class with a name and an age.
 2. Add code to allow the person name and age setters to only accept valid input. What exception should it raise if the argument values are NOT valid?
