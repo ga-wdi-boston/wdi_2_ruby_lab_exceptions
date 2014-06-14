@@ -4,8 +4,6 @@ def get_num
   retry_count = 2
 
   begin
-    puts "im at the begining"
-
     print "Enter a numerator: "
     num = Integer(gets.chomp)
 

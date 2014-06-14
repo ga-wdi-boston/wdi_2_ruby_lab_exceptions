@@ -8,6 +8,20 @@ class Person
     @name = name
     @age = age
   end
+
+  def valid_name?
+    valid = (@name.length > 1 && @name.length < 10)
+    raise PersonValidError, "Invalid name is #{@name}" unless valid
+    valid 
+  end
+
+  def valid_age?
+   raise PersonValidError, "Invalid age is #{@age}" unless @age > 0 && age < 110
+  end
+
+  def valid?
+    self.valid_name? && self.valid_age
+  end
 end
 
 

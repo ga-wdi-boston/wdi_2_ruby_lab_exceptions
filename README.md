@@ -40,9 +40,13 @@
 
 ### Demo
 
+
+#### Divide by Zero
+
 Look at div_by_zero.rb. Notice how it raises a "Divide by Zero" exception.
 
-Run it.
+Run it.  
+
 <code>
 ruby div_by_zero.rb
 </code>
@@ -53,20 +57,33 @@ Rescue the exception and show the exception attributes.
 ruby div_by_zero_exception.rb
 </code>
 
-Do the above for:  
 
-* argument_error.rb and argument_error_retry 
-* raise_exceptions.rb  
+#### Retry _(Handling Exceptions)_  
 
+Do the above for argument_error.rb and argument_error_retry 
 
-## Lab (__Advanced__)
+### Lab
+
+Create a ruby app to guess a number. Give the user 3 tries. Use __retry__
+
+### Demo
+
+#### Creating your own Exceptions.
+
+Look at Person class with a PersonValid exception class.
+
+###  Lab
+Use this PersonValid exception class to validate people.
 
 ### Validate name and age.
 1. Create a Person class with a name and an age.
-2. Add code to allow the person name and age setters to only accept valid input. What exception should it raise if the argument values are NOT valid?
-3. Write a command line utility that will prompt the user to create a valid person. Allow them to enter invalid input 3 times for the name and twice for the age. Exit out of the program if they get the name and age values wrong more than 3 and 2 times.
+2. Add a Person instance method to check if the name is has from 2 to 9 characters.
+3. Add a Person instance method to check if the person has a valid age. Greater than 0 and less than 110. 
 
-### Populate a set of people from data.
+
+### Lab __(Advanced)__
+
+#### Populate a set of people from data.
 [
 	{john: 44},
 	{mary:, 33},
