@@ -1,0 +1,36 @@
+## Lab
+- Create a Car class that has a make, model and year. 
+
+- The make should be one of Ford, Toyota or GM.
+
+- The models for Ford should be one of:
+  Ford Focus, Taraus, Mustang
+
+- The models for Toyota should be one of:
+Camry, Lexus, Corrolla, Rav4
+
+- The models for GM should be one of:
+Corvette, Lumina, Nova
+
+- Use a class constant for the list of valid makes and models.
+
+- Each car should have a unique vehicle id (VIN), (can use the faker gem).
+
+- Each car should have a year between 1960 and now.
+
+- Use a module to namespace you app/program.
+  
+- Add the validations to the Car class using a Mixin.
+
+- Create a program that will create a set of invalid and valid cars OR
+  (you can do the BONUS below. User user input to create the cars)
+
+- Create exception classes to handle invalid data (make, model and year).
+
+- Use begin/rescue/end blocks to show invalid data.
+
+
+- (Bonus) Allow the User to enter the data for each car. They should be given 2
+tries to the make, model and year correct before they are kicked out
+of the app/program.
+
